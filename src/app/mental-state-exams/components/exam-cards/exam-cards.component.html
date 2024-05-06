@@ -1,0 +1,23 @@
+<h1 class="hero-exams-cards">Mental State Exams</h1>
+<section class="section-cards-container">
+  <div class="card-container" aria-label="the-cards-container">
+    <div *ngFor="let data of examsData">
+      <mat-card>
+        <div class="card-manager" aria-label="the-card-manager">
+          <img style="width: 100%;margin-bottom: 10px"
+               mat-card-image [src]="data.patient.photoUrl" [alt]="data.patient.firstName + data.patient.lastName + '_image'"
+               aria-label="The patient image" width="200"
+          >
+          <mat-card-content>
+            <p><strong>Patient Name:</strong> {{data.patient.firstName}} {{data.patient.lastName}}</p>
+            <p><strong>Born Date:</strong> {{data.patient.birthDate }}</p>
+            <p><strong>Exam Date:</strong> {{data.exam.examDate }}</p>
+            <p><strong>Examiner Name:</strong> {{data.examiner.firstName}} {{data.examiner.lastName}}</p>
+            <p><strong>Examiner National Provider Identifier:</strong> {{data.examiner.nationalProviderIdentifier}}</p>
+            <p><strong>Total Score:</strong> {{calculateTotalScore(data.exam.id)}}</p>
+          </mat-card-content>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</section>

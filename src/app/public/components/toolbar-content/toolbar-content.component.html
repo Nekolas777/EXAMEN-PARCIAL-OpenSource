@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar" color="primary" aria-label="Main navigation">
+  <div>
+    <img class="hero-image" src="assets/HIGN-logo-1200.png" alt="Logo" />
+  </div>
+  <mat-button-toggle-group name="fontStyle"
+                           aria-label="Language selection" style="margin-left: 20px" (click)="toggleLanguage()">
+    <mat-button-toggle value="EN" checked aria-describedby="en-button">EN</mat-button-toggle>
+    <mat-button-toggle value="ES" aria-describedby="es-button">ES</mat-button-toggle>
+  </mat-button-toggle-group>
+  <span class="example-spacer"></span>
+  <div class="navigation-container" aria-label="Site navigation">
+    <button routerLink="/home" mat-button color="warn" aria-label="Home-page">Home</button>
+    <button routerLink="nursing/mental-state-exams" mat-button color="warn" aria-label="Mental-State-Exams-page">Mental State Exams</button>
+  </div>
+</mat-toolbar>

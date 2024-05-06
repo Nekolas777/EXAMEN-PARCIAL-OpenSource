@@ -1,0 +1,28 @@
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  padding: 0 20px;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.navigation-container > button {
+  font-size: 1.1rem;
+}
+
+button[mat-button]:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del botón en un 10% */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.hero-image {
+  max-width: 120px;
+  margin-top: 5px;
+}
